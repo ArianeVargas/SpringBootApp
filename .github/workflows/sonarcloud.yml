@@ -36,6 +36,6 @@ jobs:
         run: |
           mvn -B clean install -DskipTests=true sonar:sonar \
             -Dsonar.projectKey=SpringBootApp \
-            -Dsonar.organization=arianevargas \
+            -Dsonar.organization=ArianeVargas \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.token=${{ secrets.SONAR_TOKEN }}
