@@ -8,6 +8,7 @@ class SpringBootAppApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// Prueba para garantizar que el contexto de la aplicación Spring se cargue sin errores.
 	}
 
 }

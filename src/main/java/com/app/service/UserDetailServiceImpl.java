@@ -1,8 +1,8 @@
 package com.app.service;
 
-import com.app.entity.UserEntity;
-import com.app.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,16 +10,19 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.app.entity.UserEntity;
+import com.app.repository.UserRepository;
 
 @Service
 public class UserDetailServiceImpl implements UserDetailsService {
 
-    @Autowired
-    private UserRepository userRepository;
+	private final UserRepository userRepository;
 
-    // BUSCAR LOS USUARIOS Y TRAER DESDE DB
+    public UserDetailServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+	// BUSCAR LOS USUARIOS Y TRAER DESDE DB
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         // buscar el usuario por userName

@@ -44,16 +44,6 @@ public class SecurityConfig {
                 .build();
     }
 
-    // configuracion con anotaciones usando EnableMethodSecurity
-    /*
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        return httpSecurity
-                .csrf(csrf -> csrf.disable())
-                .httpBasic(Customizer.withDefaults())
-                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .build();
-    }*/
 
     // administra la autenticacion a partir de un objeto que ya existe
     @Bean
@@ -75,25 +65,5 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    // simular usuario en memoria
-    /*
-    @Bean
-    public UserDetailsService userDetailsService(){
-        List<UserDetails> userDetailsList = new ArrayList<>();
-
-        userDetailsList.add( User.withUsername("ariane")
-                .password("1234")
-                .roles("ADMIN")
-                .authorities("READ", "CREATE")
-                .build());
-
-        userDetailsList.add( User.withUsername("ivan")
-                .password("1234")
-                .roles("USER")
-                .authorities("READ")
-                .build());
-
-        return new InMemoryUserDetailsManager(userDetailsList);
-    }*/
 
 }

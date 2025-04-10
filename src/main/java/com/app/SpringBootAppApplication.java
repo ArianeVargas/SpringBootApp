@@ -15,6 +15,8 @@ import java.util.Set;
 
 @SpringBootApplication
 public class SpringBootAppApplication {
+	
+	public static final String BCRYPT_EXAMPLE_HASH = "$2a$10$BYg4Mex5gyupw9udOGNy.eu1kNQFlvhj0yoJqy.VBlSL6/sTfwUtC";
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootAppApplication.class, args);
@@ -69,7 +71,7 @@ public class SpringBootAppApplication {
 
 			UserEntity userAriane = UserEntity.builder()
 					.userName("Ariane")
-					.password("$2a$10$BYg4Mex5gyupw9udOGNy.eu1kNQFlvhj0yoJqy.VBlSL6/sTfwUtC")
+					.password(BCRYPT_EXAMPLE_HASH)
 					.isEnable(true)
 					.accountNoExpired(true)
 					.accountNoLocked(true)
@@ -79,7 +81,7 @@ public class SpringBootAppApplication {
 
 			UserEntity userIvan = UserEntity.builder()
 					.userName("Ivan")
-					.password("$2a$10$BYg4Mex5gyupw9udOGNy.eu1kNQFlvhj0yoJqy.VBlSL6/sTfwUtC")
+					.password(BCRYPT_EXAMPLE_HASH)
 					.isEnable(true)
 					.accountNoExpired(true)
 					.accountNoLocked(true)
@@ -89,7 +91,7 @@ public class SpringBootAppApplication {
 
 			UserEntity userAndres = UserEntity.builder()
 					.userName("Andres")
-					.password("$2a$10$BYg4Mex5gyupw9udOGNy.eu1kNQFlvhj0yoJqy.VBlSL6/sTfwUtC")
+					.password(BCRYPT_EXAMPLE_HASH)
 					.isEnable(true)
 					.accountNoExpired(true)
 					.accountNoLocked(true)
@@ -99,7 +101,7 @@ public class SpringBootAppApplication {
 
 			UserEntity userAndrea = UserEntity.builder()
 					.userName("Andrea")
-					.password("$2a$10$BYg4Mex5gyupw9udOGNy.eu1kNQFlvhj0yoJqy.VBlSL6/sTfwUtC")
+					.password(BCRYPT_EXAMPLE_HASH)
 					.isEnable(true)
 					.accountNoExpired(true)
 					.accountNoLocked(true)
